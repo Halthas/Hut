@@ -51,9 +51,9 @@ class Gases extends Admin_Controller {
         // Insert to Array
         $row = array();
         $row[] = $datarow;
-        $row[] = $value['gases'];
+        $row[] = $value["gases"];
         $row[] = $value["unit"];
-        $row[] = $value['stock'];
+        $row[] = $value["stock"];
         $row[] = $detail.' '.$delete;
         $gases_array[] = $row;
         $datarow += 1;
@@ -126,7 +126,7 @@ class Gases extends Admin_Controller {
     foreach ($gases as $value) {
       $value = (array) $value;
       // Insert to Array
-      $result[] = array("id" => $value['id'], "gas" => $value["gases"], "unit" => $value["unit"]);
+      $result[] = array("id" => $value['id'], "text" => $value["gases"], "unit" => $value["unit"]);
     }
     echo json_encode($result);
   }
